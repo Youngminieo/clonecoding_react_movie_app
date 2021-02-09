@@ -17,7 +17,20 @@ class App extends React.Component{
       count: current.count -1 
     }));
   }
+
+  // state life Cycle = 대표적 3가지 
+  componentDidMount() {
+    console.log("Component Did Mounted !!");
+  }
+  componentDidUpdate() {
+    console.log("Component Did Updated !!");
+  }
+  componentWillUnmount() {
+    console.log("Component Will Unmounted !!");
+  }
+
   render(){
+    console.log("rendering");
     return(
       <div>
         <h1>The number is : {this.state.count}</h1>

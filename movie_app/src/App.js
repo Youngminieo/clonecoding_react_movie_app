@@ -7,10 +7,15 @@ class App extends React.Component{
   };
 
   Add = () => {
-    console.log("add");
+    this.setState(current => ({
+      count: current.count + 1  // current는 섹시한 스타일
+      // count : this.state.count + 1 (같은 것, 그러나, state에 의존적인 표현)
+    }));
   }
   Minus = () => {
-    console.log("minus");
+    this.setState(current => ({
+      count: current.count -1 
+    }));
   }
   render(){
     return(
